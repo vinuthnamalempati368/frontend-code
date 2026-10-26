@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Login</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            background-color: lightblue;
+            margin-top: 100px;
+        }
+        form {
+            background: white;
+            padding: 25px;
+            width: 300px;
+            margin: auto;
+            border-radius: 10px;
+        }
+        input {
+            padding: 10px;
+            margin: 10px;
+            width: 80%;
+        }
+        button {
+            padding: 10px 25px;
+            background: blue;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <form onsubmit="login(event)">
+        <h2>Student Login</h2>
+        <input type="text" id="name" placeholder="Student Name" required><br>
+        <input type="email" id="email" placeholder="Email" required><br>
+        <input type="password" id="password" placeholder="Password" required><br>
+        <button type="submit">Login</button>
+        <p id="message"></p>
+    </form>
+
+    <script>
+        function login(event) {
+            event.preventDefault();
+            let name = document.getElementById("name").value;
+            document.getElementById("message").innerHTML =
+                "Welcome, " + name + "!";
+        }
+    </script>
+
+</body>
+</html>
